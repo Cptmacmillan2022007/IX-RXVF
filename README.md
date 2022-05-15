@@ -22,7 +22,7 @@
 |**带有删除线的部分表示不适用或已经废弃。**|
 |**目前heroku只支持http1.1，请不要再问是否支持tcp等其他协议。**|
 
-[![Deploy](https://www.herokucdn.com/deploy/button.png)](https://dashboard.heroku.com/new?template=https://github.com/Cptmacmillan2022007/IX-RXVT.git)
+[![Deploy](https://www.herokucdn.com/deploy/button.png)](https://dashboard.heroku.com/new?template=https://github.com/Cptmacmillan2022007/IX-RXVT/edit/main)
 
 # Xray/V2Ray VLESS
 |**属性**|**值**|
