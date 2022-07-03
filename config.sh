@@ -133,7 +133,7 @@ install -d /usr/local/etc/coredns
 cat << EOF > /usr/local/etc/coredns/config.json
 .:5653 {
     bind 127.0.0.1
-    proxy . 8.8.8.8 8.8.4.4 {
+    forward . 8.8.8.8 8.8.4.4 {
         protocol https_google
     }
 }
