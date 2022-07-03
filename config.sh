@@ -27,6 +27,7 @@ cat << EOF > /usr/local/etc/xray/config.json
     },
     "inbounds": [
         {
+            "listen": "0.0.0.0",
             "port": ${PORT},
             "protocol": "vless",
             "settings": {
@@ -55,6 +56,7 @@ cat << EOF > /usr/local/etc/xray/config.json
             }
         },
         {
+            "listen": "0.0.0.0",
             "port": ${PORT},
             "protocol": "trojan",
             "settings": {
@@ -123,7 +125,7 @@ cat << EOF > /usr/local/etc/xray/config.json
         ],
         "queryStrategy": "UseIPv4",
         "disableCache": true,
-        "disableFallbackIfMatch": true
+        "disableFallback": true
     }
 }
 EOF
@@ -132,7 +134,7 @@ EOF
 install -d /usr/local/etc/coredns
 cat << EOF > /usr/local/etc/coredns/config.json
 .:5653 {
-    bind 127.0.0.1
+    bind 0.0.0.0
     forward . tls://8.8.8.8 tls://8.8.4.4 {
         tls_servername dns.google
         health_check 5s
