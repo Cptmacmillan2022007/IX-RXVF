@@ -133,9 +133,11 @@ install -d /usr/local/etc/coredns
 cat << EOF > /usr/local/etc/coredns/config.json
 .:5653 {
     bind 127.0.0.1
-    forward . 8.8.8.8 8.8.4.4 {
-        protocol https_google
+    forward . tls://8.8.8.8 tls://8.8.4.4 {
+        tls_servername dns.google
+        health_check 5s
     }
+    reload 10s
 }
 EOF
 
