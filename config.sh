@@ -39,7 +39,7 @@ cat << EOF > /usr/local/etc/xray/config.json
                     "rejectUnknownSni": true
                 },
                 "wsSettings": {
-                  "path": "/$ID-vless"
+                  "path": "/$ID-vless?ed=2048"
                 }
             },
             "sniffing": {
@@ -71,7 +71,7 @@ cat << EOF > /usr/local/etc/xray/config.json
                     "rejectUnknownSni": true
                 },
                 "wsSettings": {
-                  "path": "/$ID-trojan"
+                  "path": "/$ID-trojan?ed=2048"
                 }
             },
             "sniffing": {
