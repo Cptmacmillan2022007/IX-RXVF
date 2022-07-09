@@ -42,6 +42,10 @@ cat << EOF > /usr/local/etc/xray/config.json
                   "path": "/$ID-vless?ed=2048"
                 }
             },
+            "mux": {
+                "enabled": true,
+                "concurrency": 8
+            },
             "sniffing": {
                 "enabled": true,
                 "destOverride": [
@@ -73,6 +77,10 @@ cat << EOF > /usr/local/etc/xray/config.json
                 "wsSettings": {
                   "path": "/$ID-trojan?ed=2048"
                 }
+            },
+            "mux": {
+                "enabled": true,
+                "concurrency": 8
             },
             "sniffing": {
                 "enabled": true,
