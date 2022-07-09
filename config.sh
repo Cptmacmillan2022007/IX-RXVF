@@ -35,6 +35,9 @@ cat << EOF > /usr/local/etc/xray/config.json
             "streamSettings": {
                 "network": "ws",
                 "allowInsecure": false,
+                "tlsSettings": {
+                    "rejectUnknownSni": true
+                },
                 "wsSettings": {
                   "path": "/$ID-vless"
                 }
@@ -64,6 +67,9 @@ cat << EOF > /usr/local/etc/xray/config.json
             "streamSettings": {
                 "network": "ws",
                 "allowInsecure": false,
+                "tlsSettings": {
+                    "rejectUnknownSni": true
+                },
                 "wsSettings": {
                   "path": "/$ID-trojan"
                 }
@@ -79,7 +85,7 @@ cat << EOF > /usr/local/etc/xray/config.json
     ],
     "routing": {
         "domainStrategy": "IPIfNonMatch",
-        "domainMatcher": "mph",
+        "domainMatcher": "hybrid",
         "rules": [
            {
               "type": "field",
