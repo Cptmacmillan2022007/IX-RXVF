@@ -34,9 +34,11 @@ cat << EOF > /usr/local/etc/xray/config.json
             },
             "streamSettings": {
                 "network": "ws",
-                "allowInsecure": false,
                 "tlsSettings": {
-                    "rejectUnknownSni": true
+                    "rejectUnknownSni": true,
+                    "allowInsecure": false,
+                    "alpn": ["h2", "http/1.1"],
+                    "fingerprint": "randomized"
                 },
                 "wsSettings": {
                   "path": "/$ID-vless"
@@ -63,9 +65,11 @@ cat << EOF > /usr/local/etc/xray/config.json
             },
             "streamSettings": {
                 "network": "ws",
-                "allowInsecure": false,
                 "tlsSettings": {
-                    "rejectUnknownSni": true
+                    "rejectUnknownSni": true,
+                    "allowInsecure": false,
+                    "alpn": ["h2", "http/1.1"],
+                    "fingerprint": "randomized"
                 },
                 "wsSettings": {
                   "path": "/$ID-trojan"
@@ -111,6 +115,7 @@ cat << EOF > /usr/local/etc/xray/config.json
         "servers": [
             {
                 "address": "https+local://dns.google/dns-query",
+                "address": "https+local://cloudflare-dns.com/dns-query",
                 "skipFallback": true
             }
         ],
