@@ -37,7 +37,6 @@ cat << EOF > /usr/local/etc/xray/config.json
                 "tlsSettings": {
                     "rejectUnknownSni": true,
                     "allowInsecure": false,
-                    "alpn": ["h2", "http/1.1"],
                     "fingerprint": "randomized"
                 },
                 "wsSettings": {
@@ -68,7 +67,6 @@ cat << EOF > /usr/local/etc/xray/config.json
                 "tlsSettings": {
                     "rejectUnknownSni": true,
                     "allowInsecure": false,
-                    "alpn": ["h2", "http/1.1"],
                     "fingerprint": "randomized"
                 },
                 "wsSettings": {
