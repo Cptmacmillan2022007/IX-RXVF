@@ -111,7 +111,6 @@ cat << EOF > /usr/local/etc/xray/config.json
         "servers": [
             {
                 "address": "https+local://dns.google/dns-query",
-                "address": "https+local://cloudflare-dns.com/dns-query",
                 "skipFallback": true
             }
         ],
