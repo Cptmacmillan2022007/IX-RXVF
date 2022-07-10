@@ -39,19 +39,12 @@ cat << EOF > /usr/local/etc/xray/config.json
                     "rejectUnknownSni": true
                 },
                 "wsSettings": {
-                  "path": "/$ID-vless?ed=2048"
+                  "path": "/$ID-vless"
                 }
             },
             "mux": {
                 "enabled": true,
                 "concurrency": 8
-            },
-            "sniffing": {
-                "enabled": true,
-                "destOverride": [
-                     "http",
-                     "tls"
-                ]
             }
         },
         {
@@ -75,19 +68,12 @@ cat << EOF > /usr/local/etc/xray/config.json
                     "rejectUnknownSni": true
                 },
                 "wsSettings": {
-                  "path": "/$ID-trojan?ed=2048"
+                  "path": "/$ID-trojan"
                 }
             },
             "mux": {
                 "enabled": true,
                 "concurrency": 8
-            },
-            "sniffing": {
-                "enabled": true,
-                "destOverride": [
-                     "http",
-                     "tls"
-                ]
             }
         }
     ],
