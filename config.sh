@@ -92,7 +92,7 @@ cat << EOF > /usr/local/etc/xray/config.json
                   "geosite:cn",
                   "geosite:category-ads-all"
               ],
-              "outboundTag": "blocked"
+              "outboundTag": "block"
            }
         ]
     },
@@ -106,7 +106,7 @@ cat << EOF > /usr/local/etc/xray/config.json
         },
         {
             "protocol": "blackhole",
-            "tag": "blocked"
+            "tag": "block"
         }
     ],
     "dns": {
