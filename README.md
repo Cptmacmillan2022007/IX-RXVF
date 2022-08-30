@@ -1,6 +1,6 @@
 # IX-RXVF
 
-# 不要再fork了，点击Use this template后修改项目名，将readme.md中的Cptmacmillan2022007替换为自己的用户名和修改后的项目名再进行部署，非常重要，切记！！！！
+# 项目已死（2022.8.30）以后不再更新
 
 # 概述
 本项目用于在 Heroku 上部署 V2Ray/Xray WebSocket，在合理使用的程度下，本镜像不会因为大量占用资源而导致封号。
